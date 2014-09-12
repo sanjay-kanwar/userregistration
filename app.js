@@ -15,7 +15,7 @@ router.route('/users')
     .get(userController.getAllUsers)
     .post(userController.postUsers);
 
-router.route('/users/:username')
+router.route('/users/:user_id')
     .get(userController.getUsers)
     .delete(userController.deleteUser);
 

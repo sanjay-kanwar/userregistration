@@ -20,8 +20,8 @@ exports.postUsers = function (req, res) {
 
 // Get One User Based On User
 exports.getUsers = function (req, res) {
-    var name = req.params.username;
-    User.find({ username: name }, function (err, user) {
+    var userId = req.params.user_id;
+    User.findById(userId, function (err, user) {
         if (err)
             res.send(err);
         res.json({message: 'One User has been found', data: user});
